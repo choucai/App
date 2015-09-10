@@ -16,7 +16,7 @@ import com.dream.util.UtilWin;
  * http://blog.csdn.net/aigestudio/article/details/41212583
  *
  */
-public class CustomView extends View implements Runnable {
+public class CvCircle extends View implements Runnable {
 
     private Context mContext;// 上下文环境引用
 
@@ -24,13 +24,13 @@ public class CustomView extends View implements Runnable {
 
     private int radiu;// 圆环半径
 
-    public CustomView(Context context) {
+    public CvCircle(Context context) {
         super(context);
         mContext = context;
         initPaint();
     }
 
-    public CustomView(Context context, AttributeSet attrs) {
+    public CvCircle(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
         initPaint();
