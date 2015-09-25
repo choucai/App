@@ -1,4 +1,4 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -122,8 +122,8 @@ public class CvImageColorMatrixColorFilter extends View {
          * 屏幕坐标y轴向上偏移位图一半的高度
          */
         // 绘制圆环
-        x = UtilWin.getScreenWidth(mContext)/2 - bitmap.getWidth() / 2;
-        y = UtilWin.getScreenHeight(mContext)/2 - bitmap.getHeight() / 2;
+        x = UtilWin.getScreenWidth()/2 - bitmap.getWidth() / 2;
+        y = UtilWin.getScreenHeight()/2 - bitmap.getHeight() / 2;
     }
 
     @Override

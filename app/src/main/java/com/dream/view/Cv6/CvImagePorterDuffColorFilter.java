@@ -1,13 +1,14 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
+import android.graphics.Color;
 import android.graphics.LightingColorFilter;
 import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -21,7 +22,7 @@ import com.dream.util.UtilWin;
  * http://blog.csdn.net/aigestudio/article/details/41316141
  *
  */
-public class CvImageLightingColorFilter extends View {
+public class CvImagePorterDuffColorFilter extends View {
 
     private Context mContext;// 上下文环境引用
 
@@ -31,13 +32,13 @@ public class CvImageLightingColorFilter extends View {
 
     private int x,y;// 位图绘制时左上角的起点坐标
 
-    public CvImageLightingColorFilter(Context context) {
+    public CvImagePorterDuffColorFilter(Context context) {
         super(context);
         mContext = context;
         initPaint();
     }
 
-    public CvImageLightingColorFilter(Context context, AttributeSet attrs) {
+    public CvImagePorterDuffColorFilter(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
 
@@ -54,16 +55,12 @@ public class CvImageLightingColorFilter extends View {
 
         /**
          * 设置颜色过滤
-         *
-         * mul全称是colorMultiply意为色彩倍增
-         * 而add全称是colorAdd意为色彩添加
-         * 这两个值都是16进制的色彩值0xAARRGGBB
-         *
-         * LightingColorFilter(0xFFFFFFFF, 0x00000000)的时候原图是不会有任何改变的
-         * 如果我们想增加红色的值，那么LightingColorFilter(0xFFFFFFFF, 0x00XX0000)就好
-         * 其中XX取值为00至FF
+         *构造方法也接受两个值
+         * 一个是16进制表示的颜色值这个很好理解
+         * 而另一个是PorterDuff内部类Mode中的一个常量值
+         * 这个值表示混合模式。
          */
-        mPaint.setColorFilter(new LightingColorFilter(0xFFFF00FF, 0x00000000));
+        mPaint.setColorFilter(new PorterDuffColorFilter(Color.RED, PorterDuff.Mode.DARKEN));
     }
 
     /**
@@ -79,8 +76,8 @@ public class CvImageLightingColorFilter extends View {
          * 屏幕坐标y轴向上偏移位图一半的高度
          */
         // 绘制圆环
-        x = UtilWin.getScreenWidth(mContext)/2 - bitmap.getWidth() / 2;
-        y = UtilWin.getScreenHeight(mContext)/2 - bitmap.getHeight() / 2;
+        x = UtilWin.getScreenWidth()/2 - bitmap.getWidth() / 2;
+        y = UtilWin.getScreenHeight()/2 - bitmap.getHeight() / 2;
     }
 
     @Override

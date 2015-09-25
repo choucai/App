@@ -5,7 +5,7 @@
     tools:context=".MainActivity">
 
 
-    <com.dream.view.EgWidget.CvEraserView
+    <com.dream.view.Cv4.StaticLayoutView
         android:id="@+id/cv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

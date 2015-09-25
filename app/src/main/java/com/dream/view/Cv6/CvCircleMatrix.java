@@ -1,4 +1,4 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -93,8 +93,8 @@ public class CvCircleMatrix extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         // 绘制圆环
-        int x = UtilWin.getScreenWidth(mContext)/2;
-        int y = UtilWin.getScreenHeight(mContext)/2;
+        int x = UtilWin.getScreenWidth()/2;
+        int y = UtilWin.getScreenHeight()/2;
         canvas.drawCircle(x,y,200,mPaint);
     }
 

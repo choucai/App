@@ -1,19 +1,14 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorMatrix;
-import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.dream.app.R;
 import com.dream.util.UtilWin;
 
 /**
@@ -137,8 +132,8 @@ public class CvPorterDuffView extends View {
     private void calu(Context context) {
 
         // 获取屏幕尺寸
-        screenW = UtilWin.getScreenWidth(context);
-        screenH = UtilWin.getScreenHeight(context);
+        screenW = UtilWin.getScreenWidth();
+        screenH = UtilWin.getScreenHeight();
 
         // 计算左上方正方形原点坐标
         s_l = 0;

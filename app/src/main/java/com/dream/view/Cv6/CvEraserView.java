@@ -1,4 +1,4 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.app.Activity;
 import android.content.Context;
@@ -40,7 +40,7 @@ public class CvEraserView extends View {
         super(context, set);
 
         // 计算参数
-        cal(context);
+        cal();
 
         // 初始化对象
         init(context);
@@ -51,11 +51,11 @@ public class CvEraserView extends View {
      *
      * @param context 上下文环境引用
      */
-    private void cal(Context context) {
+    private void cal() {
 
         // 获取屏幕宽高
-        screenW = UtilWin.getScreenWidth(context);
-        screenH = UtilWin.getScreenHeight(context);
+        screenW = UtilWin.getScreenWidth();
+        screenH = UtilWin.getScreenHeight();
     }
 
     /**

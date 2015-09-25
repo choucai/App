@@ -1,4 +1,4 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -61,8 +61,8 @@ public class CvScreenView extends View {
         // 获取包含屏幕尺寸的数组
 
         // 获取屏幕尺寸
-        screenW = UtilWin.getScreenWidth(context);
-        screenH = UtilWin.getScreenHeight(context);
+        screenW = UtilWin.getScreenWidth();
+        screenH = UtilWin.getScreenHeight();
 
         /*
          * 计算位图绘制时左上角的坐标使其位于屏幕中心

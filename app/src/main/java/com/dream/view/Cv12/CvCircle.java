@@ -1,4 +1,4 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv12;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -82,8 +82,8 @@ public class CvCircle extends View implements Runnable {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         // 绘制圆环
-        int x = UtilWin.getScreenWidth(mContext)/2;
-        int y = UtilWin.getScreenHeight(mContext)/2;
+        int x = UtilWin.getScreenWidth()/2;
+        int y = UtilWin.getScreenHeight()/2;
         canvas.drawCircle(x,y,radiu,mPaint);
     }
 

@@ -1,4 +1,4 @@
-package com.dream.view.EgWidget;
+package com.dream.view.Cv6;
 
 import android.graphics.Bitmap;
 import android.graphics.Point;
