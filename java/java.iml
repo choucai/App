@@ -27,9 +27,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="jackson-annotations-2.6.0" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-2.6.0" level="project" />
-    <orderEntry type="library" exported="" name="jackson-databind-2.6.0" level="project" />
+    <orderEntry type="library" exported="" name="D__WorkSpace_StudioWorkSpace_App_java_libs_jackson_databind_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="D__WorkSpace_StudioWorkSpace_App_java_libs_jackson_core_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="D__WorkSpace_StudioWorkSpace_App_java_libs_jackson_annotations_2_6_0_jar" level="project" />
     <orderEntry type="library" exported="" name="java.java" level="project" />
   </component>
 </module>
