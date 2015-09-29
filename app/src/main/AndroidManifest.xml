@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dream.app" >
+    package="com.dream.app">
+
+
+    <!--相机使用权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.dream.widget.TextViewActivity"
-            android:label="@string/title_activity_text_view" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.dream.widget.EditTextActivity"
-            android:label="@string/title_activity_edit_text" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name="com.dream.widget.AnimationActivity"
-            android:label="@string/title_activity_animation" >
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="com.dream.camera.CameraActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
