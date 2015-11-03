@@ -77,15 +77,23 @@
         <!-- TabLayout‘s Demo -->
         <activity
             android:name="com.dream.widget.TabLayout.TabLayoutActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <!-- Toolbar‘s Demo -->
         <activity
             android:name="com.dream.widget.ToolbarActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <!-- AppBarLayout‘s Demo -->
         <activity
             android:name="com.dream.widget.AppBarLayoutActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"></activity>
+
+        <!-- NavigationViews Demo -->
+        <activity
+            android:name="com.dream.widget.NavigationViewActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <!-- CollapsingToolbarLayout's Demo -->
+        <activity android:name="com.dream.widget.CollapsingToolbarLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

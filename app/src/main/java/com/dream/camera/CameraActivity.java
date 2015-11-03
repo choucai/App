@@ -5,6 +5,9 @@ import android.os.Bundle;
 import com.dream.app.R;
 import com.dream.base.BaseActivity;
 
+/**
+ * @author
+ */
 public class CameraActivity extends BaseActivity {
 
     @Override

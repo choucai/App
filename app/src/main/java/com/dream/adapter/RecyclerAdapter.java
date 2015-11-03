@@ -19,7 +19,6 @@ import java.util.List;
 
 
 /**
- * Description:RecyclerView 适配器
  * User: xjp
  * Date: 2015/6/8
  * Time: 10:15
@@ -53,21 +52,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.title.setText(bean.getTitle());
         holder.imageView.setImageResource(bean.getResId());
         Bitmap bitmap = BitmapFactory.decodeResource(res, bean.getResId());
-        //异步获得bitmap图片颜色值
+        //锟届步锟斤拷锟絙itmap图片锟斤拷色值
         Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
             @Override
             public void onGenerated(Palette palette) {
-                Palette.Swatch vibrant = palette.getVibrantSwatch();//有活力
-                Palette.Swatch c = palette.getDarkVibrantSwatch();//有活力 暗色
-                Palette.Swatch d = palette.getLightVibrantSwatch();//有活力 亮色
-                Palette.Swatch f = palette.getMutedSwatch();//柔和
-                Palette.Swatch a = palette.getDarkMutedSwatch();//柔和 暗色
-                Palette.Swatch b = palette.getLightMutedSwatch();//柔和 亮色
+                Palette.Swatch vibrant = palette.getVibrantSwatch();
+                Palette.Swatch c = palette.getDarkVibrantSwatch();
+                Palette.Swatch d = palette.getLightVibrantSwatch();
+                Palette.Swatch f = palette.getMutedSwatch();
+                Palette.Swatch a = palette.getDarkMutedSwatch();
+                Palette.Swatch b = palette.getLightMutedSwatch();
 
                 if (vibrant != null) {
-                    int color1 = vibrant.getBodyTextColor();//内容颜色
-                    int color2 = vibrant.getTitleTextColor();//标题颜色
-                    int color3 = vibrant.getRgb();//rgb颜色
+                    int color1 = vibrant.getBodyTextColor();
+                    int color2 = vibrant.getTitleTextColor();
+                    int color3 = vibrant.getRgb();
 
                     holder.title.setBackgroundColor(vibrant.getRgb());
                     holder.title.setTextColor(vibrant.getTitleTextColor());
@@ -75,9 +74,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             }
         });
 
-        /**
-         * 调用接口回调
-         */
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,18 +102,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         }
     }
 
-    /**
-     * 内部接口回调方法
-     */
+
     public interface OnItemClickListener {
         void onItemClick(int position, Object object);
     }
 
-    /**
-     * 设置监听方法
-     *
-     * @param listener
-     */
+
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
