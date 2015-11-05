@@ -1,3 +1,14 @@
 <resources>
 
+    <!-- 允许使用transitions -->
+    <!--<item name="android:windowContentTransitions">true</item>-->
+
+    <!-- 指定进入和退出transitions -->
+    <!--<item name="android:windowEnterTransition">@transition/explode</item>-->
+    <!--<item name="android:windowExitTransition">@transition/explode</item>-->
+
+    <!-- 指定shared element transitions -->
+    <!--<item name="android:windowSharedElementEnterTransition">@transition/change_image_transform</item>-->
+    <!--<item name="android:windowSharedElementExitTransition">@transition/change_image_transform</item>-->
+
 </resources>
