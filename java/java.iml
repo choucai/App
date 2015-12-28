@@ -13,7 +13,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build/classes/main" />
     <output-test url="file://$MODULE_DIR$/build/classes/test" />
     <exclude-output />
@@ -27,9 +27,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="D__WorkSpace_StudioWorkSpace_App_java_libs_jackson_databind_2_6_0_jar" level="project" />
-    <orderEntry type="library" exported="" name="D__WorkSpace_StudioWorkSpace_App_java_libs_jackson_core_2_6_0_jar" level="project" />
-    <orderEntry type="library" exported="" name="D__WorkSpace_StudioWorkSpace_App_java_libs_jackson_annotations_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="_Users_William_Dream__AndWorkSpace_App_java_libs_jackson_databind_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="_Users_William_Dream__AndWorkSpace_App_java_libs_jackson_core_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="_Users_William_Dream__AndWorkSpace_App_java_libs_jackson_annotations_2_6_0_jar" level="project" />
     <orderEntry type="library" exported="" name="java.java" level="project" />
   </component>
 </module>
