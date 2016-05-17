@@ -12,7 +12,7 @@ import com.dream.base.BaseActivity;
 /**
  * NavigationView‘s Demo
  */
-public class NavigationViewActivity extends BaseActivity {
+public class Activity06 extends BaseActivity {
 
     NavigationView navigationView1,navigationView2;
 

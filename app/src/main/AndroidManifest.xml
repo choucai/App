@@ -49,7 +49,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.dream.widget.TextViewActivity"
             android:screenOrientation="portrait" />
@@ -64,15 +70,15 @@
             android:screenOrientation="portrait" />
         <!-- TextInputLayout‘s Demo -->
         <activity
-            android:name="com.dream.widget.TextInputLayoutActivity"
+            android:name="com.dream.widget.Activity05"
             android:screenOrientation="portrait" />
         <!-- SnackBar‘s Demo -->
         <activity
-            android:name="com.dream.widget.SnackBarActivity"
+            android:name="com.dream.widget.Activity00"
             android:screenOrientation="portrait" />
         <!-- FloatingActionButton‘s Demo -->
         <activity
-            android:name="com.dream.widget.FabActivity"
+            android:name="com.dream.widget.Activity02"
             android:screenOrientation="portrait" />
         <!-- TabLayout‘s Demo -->
         <activity
@@ -80,25 +86,20 @@
             android:screenOrientation="portrait" />
         <!-- Toolbar‘s Demo -->
         <activity
-            android:name="com.dream.widget.ToolbarActivity"
+            android:name="com.dream.widget.Activity01"
             android:screenOrientation="portrait" />
         <!-- AppBarLayout‘s Demo -->
         <activity
-            android:name="com.dream.widget.AppBarLayoutActivity"
+            android:name="com.dream.widget.Activity03"
             android:screenOrientation="portrait"></activity>
 
         <!-- NavigationViews Demo -->
         <activity
-            android:name="com.dream.widget.NavigationViewActivity"
+            android:name="com.dream.widget.Activity06"
             android:screenOrientation="portrait"></activity>
 
         <!-- CollapsingToolbarLayout's Demo -->
-        <activity android:name="com.dream.widget.CollapsingToolbarLayoutActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.dream.widget.Activity04">
         </activity>
     </application>
 

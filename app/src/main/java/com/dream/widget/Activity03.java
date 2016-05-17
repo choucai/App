@@ -1,7 +1,6 @@
 package com.dream.widget;
 
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -9,7 +8,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -22,15 +20,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CollapsingToolbarLayout's Demo
+ * AppBarLayout & CoordinatorLayout & RecyclerView
+ *
+ * http://blog.csdn.net/feiduclear_up/article/details/46514791
+ * <p>
+ * 【scroll】所有想滚动出屏幕的view都需要设置这个flag- 没有设置这个flag的view将被固定在屏幕顶部
+ * 【enterAlways】 这个flag让任意向下的滚动都会导致该view变为可见，启用快速“返回模式”
+ * 【enterAlwaysCollapsed】 当你的视图已经设置minHeight属性又使用此标志时，你的视图只能已最小高度进入，只有当滚动视图到达顶部时才扩大到完整高度
+ * 【exitUntilCollapsed】 滚动退出屏幕，最后折叠在顶端
  */
-public class CollapsingToolbarLayoutActivity extends BaseActivity {
+public class Activity03 extends BaseActivity {
 
     private Toolbar toolbar;
     private FloatingActionButton fab;
     private RecyclerView recyclerView;
-    private CollapsingToolbarLayout collapsingToolbar;
-    private ImageView ivImage;
 
     private List<ModelBean> beanList;
     private RecyclerAdapter adapter;
@@ -38,10 +41,11 @@ public class CollapsingToolbarLayoutActivity extends BaseActivity {
     private String des[] = {"云层里的阳光", "好美的海滩", "好美的海滩", "夕阳西下的美景", "夕阳西下的美景", "夕阳西下的美景", "夕阳西下的美景", "夕阳西下的美景", "好美的海滩"};
     private int resId[] = {R.mipmap.img1, R.mipmap.img2, R.mipmap.img2, R.mipmap.img3, R.mipmap.img4, R.mipmap.img5, R.mipmap.img3, R.mipmap.img1};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_collapsing_toolbar_layout);
+        setContentView(R.layout.activity_app_bar_layout);
 
         initView();
         initData();
@@ -50,25 +54,12 @@ public class CollapsingToolbarLayoutActivity extends BaseActivity {
     private void initView() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-
-        collapsingToolbar = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle("为了梦,追梦");
-
-        ivImage = (ImageView) findViewById(R.id.ivImage);
-        ivImage.setImageResource(R.mipmap.img1);
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "在此处替换成你自己的行为", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
 
@@ -93,9 +84,8 @@ public class CollapsingToolbarLayoutActivity extends BaseActivity {
         adapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position, Object object) {
-                Toast.makeText(CollapsingToolbarLayoutActivity.this, ((ModelBean) object).getTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Activity03.this, ((ModelBean) object).getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
     }
-
 }

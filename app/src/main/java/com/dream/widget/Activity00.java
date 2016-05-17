@@ -12,7 +12,10 @@ import android.widget.TextView;
 import com.dream.app.R;
 import com.dream.base.BaseActivity;
 
-public class SnackBarActivity extends BaseActivity {
+/**
+ * SnackBar控件的简单使用
+ */
+public class Activity00 extends BaseActivity {
 
     View.OnClickListener mOnClickListener;
 

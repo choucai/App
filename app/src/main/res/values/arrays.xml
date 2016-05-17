@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arr_activity">
+        <item>00-Snackbar</item>
+        <item>01-Toolbar</item>
+        <item>02-FloatingActionButton</item>
+        <item>03-AppBarLayout</item>
+        <item>04-CollapsingToolbarLayout</item>
+        <item>05-TextInputLayout</item>
+        <item>06-NavigationView</item>
+        <item>07-</item>
+        <item>08-</item>
+        <item>09-</item>
+        <item>10-</item>
+    </string-array>
+
+</resources>

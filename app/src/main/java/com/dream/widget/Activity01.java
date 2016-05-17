@@ -10,9 +10,11 @@ import com.dream.app.R;
 import com.dream.base.BaseActivity;
 
 /**
+ * Toolbar控件的简单实用.
+ *
  * http://blog.csdn.net/feiduclear_up/article/details/46457433
  */
-public class ToolbarActivity extends BaseActivity implements Toolbar.OnMenuItemClickListener {
+public class Activity01 extends BaseActivity implements Toolbar.OnMenuItemClickListener {
 
     Toolbar tlBar;
 

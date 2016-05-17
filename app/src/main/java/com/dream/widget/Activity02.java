@@ -5,7 +5,10 @@ import android.os.Bundle;
 import com.dream.app.R;
 import com.dream.base.BaseActivity;
 
-public class FabActivity extends BaseActivity {
+/**
+ * FloatingActionButton控件的简单使用.
+ */
+public class Activity02 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
