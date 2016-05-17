@@ -49,58 +49,65 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        <!--控件Demo集合-->
         <activity
-            android:name="com.dream.widget.TextViewActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.dream.widget.EditTextActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.dream.widget.AnimationActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.dream.camera.CameraActivity"
-            android:screenOrientation="portrait" />
-        <!-- TextInputLayout‘s Demo -->
-        <activity
-            android:name="com.dream.widget.Activity05"
+            android:name="com.dream.widget.WidgetActivity"
             android:screenOrientation="portrait" />
         <!-- SnackBar‘s Demo -->
         <activity
             android:name="com.dream.widget.Activity00"
             android:screenOrientation="portrait" />
-        <!-- FloatingActionButton‘s Demo -->
-        <activity
-            android:name="com.dream.widget.Activity02"
-            android:screenOrientation="portrait" />
-        <!-- TabLayout‘s Demo -->
-        <activity
-            android:name="com.dream.widget.TabLayout.TabLayoutActivity"
-            android:screenOrientation="portrait" />
         <!-- Toolbar‘s Demo -->
         <activity
             android:name="com.dream.widget.Activity01"
             android:screenOrientation="portrait" />
+        <!-- FloatingActionButton‘s Demo -->
+        <activity
+            android:name="com.dream.widget.Activity02"
+            android:screenOrientation="portrait" />
         <!-- AppBarLayout‘s Demo -->
         <activity
             android:name="com.dream.widget.Activity03"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
 
+        <!-- CollapsingToolbarLayout's Demo -->
+        <activity
+            android:name="com.dream.widget.Activity04"
+            android:screenOrientation="portrait" />
+        <!-- TextInputLayout‘s Demo -->
+        <activity
+            android:name="com.dream.widget.Activity05"
+            android:screenOrientation="portrait" />
         <!-- NavigationViews Demo -->
         <activity
             android:name="com.dream.widget.Activity06"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <!-- TabLayout‘s Demo -->
+        <activity
+            android:name="com.dream.widget.Activity07"
+            android:screenOrientation="portrait" />
 
-        <!-- CollapsingToolbarLayout's Demo -->
-        <activity android:name="com.dream.widget.Activity04">
-        </activity>
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        <activity
+            android:name="com.dream.view.AnimationActivity"
+            android:screenOrientation="portrait" />
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        <activity
+            android:name="com.dream.camera.CameraActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

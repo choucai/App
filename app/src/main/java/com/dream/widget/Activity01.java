@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.dream.app.R;
 import com.dream.base.BaseActivity;
+import com.dream.util.UtilLog;
 
 /**
  * Toolbar控件的简单实用.
@@ -46,6 +47,10 @@ public class Activity01 extends BaseActivity implements Toolbar.OnMenuItemClickL
                 break;
             case R.id.action_share:
                 Toast.makeText(this, "分享按钮", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_settings:
+                UtilLog.e(TAG,"11111111");
+                Toast.makeText(this, "设置按钮", Toast.LENGTH_SHORT).show();
                 break;
         }
         return false;

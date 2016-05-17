@@ -1,4 +1,4 @@
-package com.dream.widget.TabLayout;
+package com.dream.widget;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -7,8 +7,9 @@ import android.support.v7.widget.Toolbar;
 
 import com.dream.app.R;
 import com.dream.base.BaseActivity;
+import com.dream.widget.TabLayout.FmPagerAdapter;
 
-public class TabLayoutActivity extends BaseActivity {
+public class Activity07 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

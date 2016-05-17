@@ -1,4 +1,4 @@
-package com.dream.widget;
+package com.dream.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
@@ -16,9 +16,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewPropertyAnimator;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.dream.app.R;
