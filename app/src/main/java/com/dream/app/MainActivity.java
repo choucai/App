@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.dream.base.BaseActivity;
-import com.dream.widget.WidgetActivity;
 
 /**
  * 相关模块列表
@@ -22,7 +21,7 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar)findViewById(R.id.tb_main_bar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tb_main_bar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -65,14 +64,17 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
         return false;
     }
 
-    public void onClick(View view){
-        switch (view.getId()){
+    public void onClick(View view) {
+        switch (view.getId()) {
 
-            case R.id.btn_widget:
-                startActivity(new Intent(this, WidgetActivity.class));
+            case R.id.btn_widget: // 控件使用
+                startActivity(new Intent(this, ListActivity.class));
                 break;
 
-            case R.id.btn_view:
+            case R.id.btn_plugin: // 插件开发
+                break;
+
+            case R.id.btn_view: // 自定义View
                 break;
         }
     }

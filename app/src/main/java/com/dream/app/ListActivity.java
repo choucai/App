@@ -1,4 +1,4 @@
-package com.dream.widget;
+package com.dream.app;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,10 @@ import android.widget.Toast;
 import com.dream.app.R;
 import com.dream.base.BaseActivity;
 
-public class WidgetActivity extends BaseActivity implements AdapterView.OnItemClickListener {
+/**
+ * 写成可以传参数-动态加载的Activity.
+ */
+public class ListActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
     private final String ACTIVITY_PATH = "com.dream.widget.Activity";
 

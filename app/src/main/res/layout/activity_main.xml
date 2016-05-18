@@ -14,30 +14,38 @@
         android:minHeight="?attr/actionBarSize" />
 
     <ScrollView
-        android:layout_below="@+id/tb_main_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tb_main_bar">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_widget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
                 android:onClick="onClick"
-                android:text="Widget Demo" />
+                android:text="Widget Demo"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_plugin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:text="PLUGIN DEVELOP"
+                android:textColor="@android:color/white" />
 
             <Button
                 android:id="@+id/btn_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
                 android:onClick="onClick"
-                android:text="Custom View" />
+                android:text="Custom View"
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </ScrollView>
 

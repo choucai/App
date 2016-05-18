@@ -61,7 +61,7 @@
 
         <!--控件Demo集合-->
         <activity
-            android:name="com.dream.widget.WidgetActivity"
+            android:name=".ListActivity"
             android:screenOrientation="portrait" />
         <!-- SnackBar‘s Demo -->
         <activity
