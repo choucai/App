@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.dream.app.R;
 import com.dream.base.BaseActivity;
 
 /**
@@ -36,7 +35,7 @@ public class ListActivity extends BaseActivity implements AdapterView.OnItemClic
 
         toolbar = (Toolbar) findViewById(R.id.tb_widget_bar);
         setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_36dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

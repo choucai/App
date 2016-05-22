@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dream.plugin.PluginActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tl_plugin_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary" />
+
+    <Button
+        android:id="@+id/btn_start_plugin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tl_plugin_bar"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Open Proxy Load Plugin Version 1" />
+
+    <Button
+        android:id="@+id/btn_start_plugin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_start_plugin1"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="Open Proxy Load Plugin Version 2" />
+
+</RelativeLayout>

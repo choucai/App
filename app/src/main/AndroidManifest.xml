@@ -56,10 +56,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        <!--控件Demo集合-->
+        <!-- 控件Demo集合 -->
         <activity
             android:name=".ListActivity"
             android:screenOrientation="portrait" />
@@ -96,18 +95,36 @@
         <activity
             android:name="com.dream.widget.Activity07"
             android:screenOrientation="portrait" />
-
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+        <!-- 动画 -->
         <activity
             android:name="com.dream.view.AnimationActivity"
             android:screenOrientation="portrait" />
-
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        <!-- 相机 -->
         <activity
             android:name="com.dream.camera.CameraActivity"
             android:screenOrientation="portrait" />
 
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        <!-- 插件入口 -->
+        <activity
+            android:name="com.dream.plugin.PluginActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 插件代理 TODO 注意添加category,否则找不到Activity -->
+        <activity
+            android:name="com.dream.plugin.ProxyActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.dream.test.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     </application>
 
 </manifest>

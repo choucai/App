@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.dream.base.BaseActivity;
+import com.dream.plugin.PluginActivity;
 
 /**
  * 相关模块列表
@@ -72,6 +73,7 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
                 break;
 
             case R.id.btn_plugin: // 插件开发
+                startActivity(new Intent(this, PluginActivity.class));
                 break;
 
             case R.id.btn_view: // 自定义View
