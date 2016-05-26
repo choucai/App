@@ -1,3 +1,18 @@
 
 公共技术点之 Java 注解 Annotation
 http://p.codekk.com/blogs/detail/54cfab086c4761e5001b253b
+
+Java注解处理器
+http://www.race604.com/annotation-processing/
+
+AndroidSutdio 编译时自动生成源代码
+http://www.septenary.cn/2015/12/19/AndroidSutdio-%E7%BC%96%E8%AF%91%E6%97%B6%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E6%BA%90%E4%BB%A3%E7%A0%81/
+
+Java Annotation原理分析(1)
+Java Annotation原理分析(2)
+Java Annotation原理分析(3)
+Java Annotation原理分析(4)
+http://blog.csdn.net/blueheart20/article/details/18725801
+
+
+
