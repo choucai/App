@@ -15,4 +15,9 @@
         <item>10-</item>
     </string-array>
 
+
+    <string-array name="arr_senior">
+        <item>00-Runtime</item>
+    </string-array>
+
 </resources>

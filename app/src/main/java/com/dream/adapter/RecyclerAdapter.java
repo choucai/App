@@ -52,7 +52,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.title.setText(bean.getTitle());
         holder.imageView.setImageResource(bean.getResId());
         Bitmap bitmap = BitmapFactory.decodeResource(res, bean.getResId());
-        //�첽���bitmapͼƬ��ɫֵ
+
         Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
             @Override
             public void onGenerated(Palette palette) {

@@ -69,11 +69,15 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
         switch (view.getId()) {
 
             case R.id.btn_widget: // 控件使用
-                startActivity(new Intent(this, ListActivity.class));
+                ListActivity.startAction(this, ListActivity.PATH_WIDGET, "Widget Demo", R.array.arr_activity);
                 break;
 
             case R.id.btn_plugin: // 插件开发
                 startActivity(new Intent(this, PluginActivity.class));
+                break;
+
+            case R.id.btn_senior: // 新特性
+                ListActivity.startAction(this, ListActivity.PATH_SENIOR, "Senior Demo", R.array.arr_senior);
                 break;
 
             case R.id.btn_view: // 自定义View
