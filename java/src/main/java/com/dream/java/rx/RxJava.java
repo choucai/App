@@ -1,4 +1,4 @@
-package com.dream.java.other;
+package com.dream.java.rx;
 
 import rx.Observable;
 import rx.Subscriber;
@@ -21,11 +21,11 @@ public class RxJava {
 
     public static void main(String args[]) {
         // RxJava原理
-//        howWork();
+        howWork();
         // 简洁写法
-//        cleanWriting();
+        cleanWriting();
         // 操作符
-//        operatorMap1();
+        operatorMap1();
         operatorMap2();
     }
 
