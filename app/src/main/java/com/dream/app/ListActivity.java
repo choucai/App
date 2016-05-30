@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.dream.base.BaseActivity;
 
+import java.util.List;
+
 /**
  * 写成可以传参数-动态加载的Activity.
  */
@@ -22,12 +24,12 @@ public class ListActivity extends BaseActivity implements AdapterView.OnItemClic
     private static final String ARRAY = "array";
 
     /**
-     *
+     * Android控件的使用
      */
     public static final String PATH_WIDGET = "com.dream.widget.Activity";
 
     /**
-     *
+     * Android 发布的新版本系统的新特性
      */
     public static final String PATH_SENIOR = "com.dream.senior.Activity";
 
@@ -61,7 +63,7 @@ public class ListActivity extends BaseActivity implements AdapterView.OnItemClic
             }
         });
 
-        int array = getIntent().getIntExtra(ARRAY,0);
+        int array = getIntent().getIntExtra(ARRAY, 0);
         strArray = getResources().getStringArray(array);
         arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strArray);
 

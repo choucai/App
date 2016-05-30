@@ -1,0 +1,12 @@
+
+Java 理论和实践: 了解泛型
+http://www.ibm.com/developerworks/cn/java/j-jtp01255.html
+
+诊断 Java 代码: 轻松掌握 Java 泛型
+https://www.ibm.com/developerworks/cn/java/j-djc02113/
+
+Java 理论与实践: 使用通配符简化泛型使用
+http://www.ibm.com/developerworks/cn/java/j-jtp04298.html
+
+多角度看 Java 中的泛型
+https://www.ibm.com/developerworks/cn/java/j-lo-gj/
