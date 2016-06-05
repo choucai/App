@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
  * @created 2016-05-26 下午4:54.
  * @phone 152-5320-8570
  */
-public class AnnotationDemo1 {
+public class AnnotationDemo {
 
 
     public static void main(String[] args) {
