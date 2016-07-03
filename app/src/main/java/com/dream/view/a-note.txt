@@ -1,0 +1,7 @@
+
+公共技术点之 View 绘制流程
+http://p.codekk.com/blogs/detail/54cfab086c4761e5001b253f
+
+公共技术点之 View 事件传递
+http://p.codekk.com/blogs/detail/54cfab086c4761e5001b253e
+
