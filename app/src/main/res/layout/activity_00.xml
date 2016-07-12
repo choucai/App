@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context="com.dream.net.Activity00">
+
+    <TextView
+        android:id="@+id/tv_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_scheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/tv_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/tv_port"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/tv_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/tv_query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/tv_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/tv_all_uri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" />
+
+</LinearLayout>

@@ -12,8 +12,6 @@ import android.widget.Toast;
 
 import com.dream.base.BaseActivity;
 
-import java.util.List;
-
 /**
  * 写成可以传参数-动态加载的Activity.
  */
@@ -32,6 +30,11 @@ public class ListActivity extends BaseActivity implements AdapterView.OnItemClic
      * Android 发布的新版本系统的新特性
      */
     public static final String PATH_SENIOR = "com.dream.senior.Activity";
+
+    /**
+     * Android Net
+     */
+    public static final String PATH_NET = "com.dream.net.Activity";
 
 
     private String packagePath;

@@ -20,4 +20,9 @@
         <item>00-Runtime</item>
     </string-array>
 
+    <string-array name="arr_net">
+        <item>00-Uri详解</item>
+        <item>01-Android序列化</item>
+    </string-array>
+
 </resources>

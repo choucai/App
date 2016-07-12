@@ -82,6 +82,10 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
 
             case R.id.btn_view: // 自定义View
                 break;
+
+            case R.id.btn_net: // 网络相关
+                ListActivity.startAction(this, ListActivity.PATH_NET, "Android Net", R.array.arr_net);
+                break;
         }
     }
 
