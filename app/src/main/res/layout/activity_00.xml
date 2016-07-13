@@ -20,6 +20,12 @@
         android:padding="4dp" />
 
     <TextView
+        android:id="@+id/tv_scheme_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" />
+
+    <TextView
         android:id="@+id/tv_host"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,6 +60,12 @@
 
     <TextView
         android:id="@+id/tv_all_uri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp" />
+
+    <TextView
+        android:id="@+id/tv_book"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="4dp" />
