@@ -110,7 +110,7 @@ public class Transformation {
      */
     private static void testFlatMapMore() {
         Observable<Integer> values = Observable.range(1, 3);
-        values.flatMap(i -> Observable.range(0, i)).subscribe(new PrintSubscriber("flatMap"));
+        values.flatMap(i -> Observable.range(0, i)).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("flatMap"));
     }
 
 
@@ -120,7 +120,7 @@ public class Transformation {
      */
     private static void testFlatMapOne() {
         Observable<Integer> values = Observable.just(2);
-        values.flatMap(i -> Observable.range(0, i)).subscribe(new PrintSubscriber("flatMap"));
+        values.flatMap(i -> Observable.range(0, i)).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("flatMap"));
     }
 
 
@@ -133,7 +133,7 @@ public class Transformation {
      */
     private static void testMaterialize() {
         Observable<Long> values = Observable.interval(100, TimeUnit.MILLISECONDS);
-        values.take(3).materialize().subscribe(new PrintSubscriber("Materialize"));
+        values.take(3).materialize().subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Materialize"));
         try {
             System.in.read();
         } catch (IOException e) {
@@ -147,7 +147,7 @@ public class Transformation {
      */
     private static void testInterval() {
         Observable<Long> values = Observable.interval(100, TimeUnit.MILLISECONDS);
-        values.take(3).timeInterval().subscribe(new PrintSubscriber("TimeInterval"));
+        values.take(3).timeInterval().subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("TimeInterval"));
         try {
             System.in.read();
         } catch (IOException e) {
@@ -162,7 +162,7 @@ public class Transformation {
      */
     private static void testTimestamp() {
         Observable<Long> values = Observable.interval(100, TimeUnit.MILLISECONDS);
-        values.take(3).timestamp().subscribe(new PrintSubscriber("Timestamp"));
+        values.take(3).timestamp().subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Timestamp"));
         try {
             System.in.read();
         } catch (IOException e) {
@@ -177,7 +177,7 @@ public class Transformation {
      */
     private static void testOfType() {
         Observable<Object> values = Observable.just(0, 1, "2", 3);
-        values.ofType(Integer.class).subscribe(new PrintSubscriber("Map"));
+        values.ofType(Integer.class).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Map"));
     }
 
 
@@ -186,7 +186,7 @@ public class Transformation {
      */
     private static void testCastError() {
         Observable<Object> values = Observable.just(0, 1, 2, "3");
-        values.cast(Integer.class).subscribe(new PrintSubscriber("Map"));
+        values.cast(Integer.class).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Map"));
     }
 
 
@@ -196,7 +196,7 @@ public class Transformation {
      */
     private static void testCastCompleted() {
         Observable<Object> values = Observable.just(0, 1, 2, 3);
-        values.cast(Integer.class).subscribe(new PrintSubscriber("Map"));
+        values.cast(Integer.class).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Map"));
     }
 
 
@@ -205,7 +205,7 @@ public class Transformation {
      */
     private static void testMap02() {
         Observable<Integer> values = Observable.just("0", "1", "2", "3").map(Integer::parseInt);
-        values.subscribe(new PrintSubscriber("Map"));
+        values.subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Map"));
     }
 
 
@@ -215,7 +215,7 @@ public class Transformation {
      */
     private static void testMap01() {
         Observable<Integer> values = Observable.range(0, 4);
-        values.map(i -> i + 3).subscribe(new PrintSubscriber("Map"));
+        values.map(i -> i + 3).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Map"));
     }
 
 }

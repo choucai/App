@@ -40,7 +40,7 @@ public class Aggregation {
 
 //        testReduceCount();
 
-//        testScan();
+        testScan();
 
 //        testScanReduce();
 
@@ -62,7 +62,7 @@ public class Aggregation {
 //        testGroupByWithNest();
 //        testGroupByNoNest();
 
-        testNest();
+//        testNest();
 
 
     }
@@ -108,10 +108,10 @@ public class Aggregation {
     }
 
     private static void testMulMapFactory() {
-        Observable<Person> values = Observable.just(
-                new Person("Will", 35),
-                new Person("Nick", 40),
-                new Person("Saul", 35)
+        Observable<com.dream.java.rx.test.B.entity.Person> values = Observable.just(
+                new com.dream.java.rx.test.B.entity.Person("Will", 35),
+                new com.dream.java.rx.test.B.entity.Person("Nick", 40),
+                new com.dream.java.rx.test.B.entity.Person("Saul", 35)
         );
 
         values
@@ -120,28 +120,28 @@ public class Aggregation {
                         person -> person.name,
                         () -> new HashMap(),
                         (key) -> new ArrayList()) // 没有使用这个 key 参数
-                .subscribe(new PrintSubscriber("toMap"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("toMap"));
     }
 
     private static void testMultMap() {
-        Observable<Person> values = Observable.just(
-                new Person("Will", 35),
-                new Person("Nick", 40),
-                new Person("Saul", 35)
+        Observable<com.dream.java.rx.test.B.entity.Person> values = Observable.just(
+                new com.dream.java.rx.test.B.entity.Person("Will", 35),
+                new com.dream.java.rx.test.B.entity.Person("Nick", 40),
+                new com.dream.java.rx.test.B.entity.Person("Saul", 35)
         );
 
         values
                 .toMultimap(
                         person -> person.age,
                         person -> person.name)
-                .subscribe(new PrintSubscriber("toMap"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("toMap"));
     }
 
     private static void testToMapFactory() {
-        Observable<Person> values = Observable.just(
-                new Person("Will", 25),
-                new Person("Nick", 40),
-                new Person("Saul", 35)
+        Observable<com.dream.java.rx.test.B.entity.Person> values = Observable.just(
+                new com.dream.java.rx.test.B.entity.Person("Will", 25),
+                new com.dream.java.rx.test.B.entity.Person("Nick", 40),
+                new com.dream.java.rx.test.B.entity.Person("Saul", 35)
         );
 
         values
@@ -149,36 +149,36 @@ public class Aggregation {
                         person -> person.name,
                         person -> person.age,
                         () -> new HashMap())
-                .subscribe(new PrintSubscriber("toMap"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("toMap"));
     }
 
     private static void testToMapValue() {
-        Observable<Person> values = Observable.just(
-                new Person("Will", 25),
-                new Person("Nick", 40),
-                new Person("Saul", 35)
+        Observable<com.dream.java.rx.test.B.entity.Person> values = Observable.just(
+                new com.dream.java.rx.test.B.entity.Person("Will", 25),
+                new com.dream.java.rx.test.B.entity.Person("Nick", 40),
+                new com.dream.java.rx.test.B.entity.Person("Saul", 35)
         );
 
         values
                 .toMap(
                         person -> person.name,
                         person -> person.age)
-                .subscribe(new PrintSubscriber("toMap"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("toMap"));
     }
 
     /**
      * toMap 把数据流 T 变为一个 Map<TKey,T>
      */
     private static void testToMapKey() {
-        Observable<Person> values = Observable.just(
-                new Person("Will", 25),
-                new Person("Nick", 40),
-                new Person("Saul", 35)
+        Observable<com.dream.java.rx.test.B.entity.Person> values = Observable.just(
+                new com.dream.java.rx.test.B.entity.Person("Will", 25),
+                new com.dream.java.rx.test.B.entity.Person("Nick", 40),
+                new com.dream.java.rx.test.B.entity.Person("Saul", 35)
         );
 
         values
                 .toMap(person -> person.name)
-                .subscribe(new PrintSubscriber("toMap"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("toMap"));
     }
 
     /**
@@ -241,12 +241,12 @@ public class Aggregation {
         Subject<Integer, Integer> values = ReplaySubject.create();
 
         values
-                .subscribe(new PrintSubscriber("Values"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Values"));
 
         values
                 .scan((i1, i2) -> (i1 < i2) ? i1 : i2)
                 .distinctUntilChanged()
-                .subscribe(new PrintSubscriber("Min"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Min"));
 
         values.onNext(2);
         values.onNext(3);
@@ -263,7 +263,7 @@ public class Aggregation {
 
         values
                 .scan((i1, i2) -> i1 + i2)
-                .subscribe(new PrintSubscriber("Sum"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Sum"));
     }
 
     /**
@@ -277,7 +277,7 @@ public class Aggregation {
 
         values
                 .reduce(0, (acc, next) -> acc + 1)
-                .subscribe(new PrintSubscriber("Count"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Count"));
     }
 
     /**
@@ -289,11 +289,11 @@ public class Aggregation {
 
         values
                 .reduce((i1, i2) -> i1 + i2)
-                .subscribe(new PrintSubscriber("Sum"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Sum"));
 
         values
                 .reduce((i1, i2) -> (i1 > i2) ? i2 : i1)
-                .subscribe(new PrintSubscriber("Min"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Min"));
     }
 
     /**
@@ -307,11 +307,11 @@ public class Aggregation {
 
         values.take(10) // 获取前 10 个数据 的 Observable
                 .single(v -> v == 5L) // 有且仅有一个 数据为 5L
-                .subscribe(new PrintSubscriber("Single1"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Single1"));
 
         values// 由于源 Observable 为无限的，所以这个不会打印任何东西
                 .single(v -> v == 5L)
-                .subscribe(new PrintSubscriber("Single2"));
+                .subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Single2"));
 
         try {
             System.in.read();
@@ -327,7 +327,7 @@ public class Aggregation {
      */
     private static void testLast() {
         Observable<Integer> values = Observable.range(3, 6);
-        values.last(v -> v > 5).subscribe(new PrintSubscriber("Last"));
+        values.last(v -> v > 5).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Last"));
         try {
             System.in.read();
         } catch (IOException e) {
@@ -345,7 +345,7 @@ public class Aggregation {
      */
     private static void testFirst() {
         Observable<Long> values = Observable.interval(100, TimeUnit.MILLISECONDS);
-        values.first(v -> v > 5).subscribe(new PrintSubscriber("First"));
+        values.first(v -> v > 5).subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("First"));
         try {
             System.in.read();
         } catch (IOException e) {
@@ -359,8 +359,8 @@ public class Aggregation {
      */
     private static void testCount() {
         Observable<Integer> values = Observable.range(0, 3);
-        values.subscribe(new PrintSubscriber("Values"));
-        values.count().subscribe(new PrintSubscriber("Count"));
+        values.subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Values"));
+        values.count().subscribe(new com.dream.java.rx.test.B.entity.PrintSubscriber("Count"));
     }
 
 }

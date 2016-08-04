@@ -1,4 +1,4 @@
-package com.dream.java.rx.test.B;
+package com.dream.java.rx.test.B.entity;
 
 /**
  * TODO.
