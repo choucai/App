@@ -132,15 +132,15 @@
         <activity
             android:name="com.dream.senior.Activity00"
             android:screenOrientation="portrait" />
-
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        <!--Android 网络相关-->
-        <activity android:name="com.dream.net.Activity00"
+        <!-- Android 网络相关 -->
+        <activity
+            android:name="com.dream.net.Activity00"
             android:screenOrientation="portrait" />
-
-        <activity android:name="com.dream.net.Activity01"
+        <activity
+            android:name="com.dream.net.Activity01"
             android:screenOrientation="portrait" />
-
+        <activity android:name="com.dream.senior.Activity01"></activity>
     </application>
 
 </manifest>

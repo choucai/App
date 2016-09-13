@@ -18,6 +18,7 @@
 
     <string-array name="arr_senior">
         <item>00-Runtime</item>
+        <item>01-IconFont and Svg</item>
     </string-array>
 
     <string-array name="arr_net">
