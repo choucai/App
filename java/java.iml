@@ -30,9 +30,8 @@
     <orderEntry type="library" exported="" name="rxjava-1.1.6" level="project" />
     <orderEntry type="library" exported="" name="junit-4.12" level="project" />
     <orderEntry type="library" exported="" name="hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" exported="" name="C__WorkSpace_Studio_WilliamDream_java_libs_jackson_databind_2_6_0_jar" level="project" />
-    <orderEntry type="library" exported="" name="C__WorkSpace_Studio_WilliamDream_java_libs_jackson_core_2_6_0_jar" level="project" />
-    <orderEntry type="library" exported="" name="C__WorkSpace_Studio_WilliamDream_java_libs_jackson_annotations_2_6_0_jar" level="project" />
-    <orderEntry type="library" exported="" name="java.java" level="project" />
+    <orderEntry type="library" exported="" name="_home_william_Develop_WorkSpace_Studio_WilliamDream_java_libs_jackson_databind_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="_home_william_Develop_WorkSpace_Studio_WilliamDream_java_libs_jackson_core_2_6_0_jar" level="project" />
+    <orderEntry type="library" exported="" name="_home_william_Develop_WorkSpace_Studio_WilliamDream_java_libs_jackson_annotations_2_6_0_jar" level="project" />
   </component>
 </module>
