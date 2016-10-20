@@ -4,11 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/App.iml" filepath="$PROJECT_DIR$/App.iml" />
       <module fileurl="file://$PROJECT_DIR$/WilliamDream.iml" filepath="$PROJECT_DIR$/WilliamDream.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WilliamDream.iml" filepath="$PROJECT_DIR$/WilliamDream.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/unit/unit.iml" filepath="$PROJECT_DIR$/unit/unit.iml" />
       <module fileurl="file://$PROJECT_DIR$/unit/unit.iml" filepath="$PROJECT_DIR$/unit/unit.iml" />
     </modules>
   </component>

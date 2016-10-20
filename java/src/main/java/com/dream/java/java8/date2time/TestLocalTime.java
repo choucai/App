@@ -18,7 +18,7 @@ public class TestLocalTime {
 
     public static void main(String[] args) {
 
-//        testBase();
+        testBase();
 
         testSix();
 
