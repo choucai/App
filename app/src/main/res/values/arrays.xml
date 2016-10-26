@@ -24,6 +24,7 @@
     <string-array name="arr_net">
         <item>00-Uri详解</item>
         <item>01-Android序列化</item>
+        <item>02-Android Deep Links</item>
     </string-array>
 
 </resources>

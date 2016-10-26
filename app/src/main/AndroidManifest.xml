@@ -132,6 +132,9 @@
         <activity
             android:name="com.dream.senior.Activity00"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dream.senior.Activity01"
+            android:screenOrientation="portrait" />
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         <!-- Android 网络相关 -->
         <activity
@@ -140,7 +143,22 @@
         <activity
             android:name="com.dream.net.Activity01"
             android:screenOrientation="portrait" />
-        <activity android:name="com.dream.senior.Activity01"></activity>
+
+        <activity
+            android:name="com.dream.net.Activity02"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.dream.net" />
+            </intent-filter>
+
+        </activity>
+
     </application>
 
 </manifest>
