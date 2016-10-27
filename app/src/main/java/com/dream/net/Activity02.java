@@ -3,7 +3,6 @@ package com.dream.net;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.webkit.WebView;
 import android.widget.Toast;
 
@@ -20,7 +19,7 @@ public class Activity02 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_02);
+        setContentView(R.layout.activity_deep_links);
 
         WebView wvDeepLinks = (WebView) findViewById(R.id.wv_deep_links);
         wvDeepLinks.loadUrl("file:///android_asset/deeplinks.html");

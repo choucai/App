@@ -22,7 +22,7 @@ public class Activity01 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_01);
+        setContentView(R.layout.activity_serializable_parcelable);
     }
 
     public void onClick(View view){
