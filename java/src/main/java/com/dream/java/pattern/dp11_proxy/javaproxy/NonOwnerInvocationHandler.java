@@ -22,7 +22,7 @@ public class NonOwnerInvocationHandler implements InvocationHandler {
 			} 
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-        } 
+        }
 		return null;
 	}
 }

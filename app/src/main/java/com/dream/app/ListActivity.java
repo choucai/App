@@ -32,6 +32,11 @@ public class ListActivity extends BaseActivity implements AdapterView.OnItemClic
     public static final String PATH_SENIOR = "com.dream.senior.Activity";
 
     /**
+     * Android 动画详解
+     */
+    public static final String PATH_ANIM = "com.dream.anim.Activity";
+
+    /**
      * Android Net
      */
     public static final String PATH_NET = "com.dream.net.Activity";

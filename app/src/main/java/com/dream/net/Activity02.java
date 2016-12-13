@@ -13,6 +13,7 @@ import com.dream.base.BaseActivity;
  * Deep Links.
  * <p>
  * http://chuansong.me/n/355263951030
+ * http://blog.zhaiyifan.cn/2016/02/04/deeplink-intro/
  */
 public class Activity02 extends BaseActivity {
 
