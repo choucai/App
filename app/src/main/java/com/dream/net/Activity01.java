@@ -2,10 +2,10 @@ package com.dream.net;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.dream.app.R;
+import com.dream.base.BaseActivity;
 import com.dream.model.entity.BookInUser;
 import com.dream.model.entity.BookParcelable;
 import com.dream.model.entity.BookSerializable;
@@ -17,12 +17,12 @@ import com.dream.model.entity.BookSerializable;
  * <p/>
  * Serializable参见 {@link BookSerializable}
  */
-public class Activity01 extends AppCompatActivity {
+public class Activity01 extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_01);
+        setContentView(R.layout.activity_serializable_parcelable);
     }
 
     public void onClick(View view){

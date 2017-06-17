@@ -1,9 +1,12 @@
 package com.dream.java.rx.test.C;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
+import rx.subjects.ReplaySubject;
 
 /**
  * RxJava 教程第三部分：驯服数据流之 避免 monad.
@@ -36,8 +39,129 @@ public class Monad {
 //        testForEachError();
 
 //        testFirstBlock();
-        testSingleError();
 
+//        testSingleError();
+
+//        testToIterable();
+
+//        testNextIterable();
+
+//        testLastIterable();
+
+//        testMostRecent();
+
+//        testFuture();
+
+        testDeadLock();
+
+
+    }
+
+    private static void testDeadLock() {
+        ReplaySubject<Integer> subject = ReplaySubject.create();
+
+        subject.toBlocking().forEach(v -> System.out.println(v));
+        subject.onNext(1);
+        subject.onNext(2);
+        subject.onCompleted();
+    }
+
+    /**
+     * 使用 toFuture 函数也可以把 BlockingObservable 转换为一个 Future，该方法只是创建一个 Future 并返回，不会阻塞
+     * Future 可以让消费者决定如何处理异步操作。Future 也可以处理异常情况
+     * 通过这种方式创建的 Future，要求 Observable 只发射一个数据，和 single 函数要求的一样
+     * 如果发射了多个数据，则 Future 会抛出 java.lang.IllegalArgumentException.
+     */
+    private static void testFuture(){
+        Observable<Long> values = Observable.timer(500, TimeUnit.MILLISECONDS);
+
+        values.subscribe(v -> System.out.println("Emitted: " + v));
+
+        Future<Long> future = values.toBlocking().toFuture();
+        try {
+            System.out.println(future.get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * mostRecent 返回的 iterator 从来不会阻塞。他会缓存最近一个值，如果消费者比 生产者处理的速度慢，则有数据会丢失
+     * 和 latest 不一样的是， 只要消费者需要数据，则缓存的数据就会直接返回
+     * 这样，如果消费者处理数据的速度快，则消费者就会看到重复的数据。所以为了实现不阻塞的操作，该函数需要一个初始化的值
+     * 如果 Observable 还没有发射数据，消费者这个时候看到的就是这个初始化的值
+     */
+    private static void testMostRecent() {
+        Observable<Long> values = Observable.interval(500, TimeUnit.MILLISECONDS);
+
+        values.take(5).subscribe(v -> System.out.println("Emitted: " + v));
+
+        Iterable<Long> iterable = values.take(5).toBlocking().mostRecent(-1L);
+        for (long l : iterable) {
+            System.out.println(l);
+            try {
+                Thread.sleep(400);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * latest 和 next 类似,区别就是 latest 会缓存一个数据
+     * 使用 latest 的时候，如果在下一个数据发射之前，当前的数据还没有被消费者消费，则当前的值就会丢失
+     * 如果 消费者比 生产者（Observable）发射的数据快，则 iterator 会阻塞并且等待下一个数据
+     */
+    private static void testLastIterable() {
+        Observable<Long> values = Observable.interval(500, TimeUnit.MILLISECONDS);
+
+        values.take(5).subscribe(v -> System.out.println("Emitted: " + v));
+
+        Iterable<Long> iterable = values.take(5).toBlocking().latest();
+        for (long l : iterable) {
+            System.out.println(l);
+            try {
+                Thread.sleep(750);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 这种实现数据没有缓存,iterator总是等待下一个数据并立刻返回
+     */
+    private static void testNextIterable() {
+        Observable<Long> values = Observable.interval(500, TimeUnit.MILLISECONDS);
+
+        values.take(5).subscribe(v -> System.out.println("Emitted: " + v));
+
+        Iterable<Long> iterable = values.take(5).toBlocking().next();
+        for (long l : iterable) {
+            System.out.println(l);
+            try {
+                Thread.sleep(750);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 把 Observable 所发射的所有数据给收集起来并缓存到一个集合中
+     * 由于缓存的存在，所以不会丢失数据
+     * 一单有下一个数据 next() 函数就返回,否则的话就阻塞到数据可用
+     * 注意： iterable 的 hasNext() 或者 next() 函数都会阻塞直到有数据可用
+     */
+    private static void testToIterable() {
+        Observable<Long> values = Observable.interval(500, TimeUnit.MILLISECONDS);
+
+        Iterable<Long> iterable = values.take(5).toBlocking().toIterable();
+        for (long l : iterable) {
+            System.out.println(l);
+        }
     }
 
     private static void testSingleError() {

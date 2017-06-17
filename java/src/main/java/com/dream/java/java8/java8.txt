@@ -1,0 +1,11 @@
+
+函数式编程初探
+http://www.ruanyifeng.com/blog/2012/04/functional_programming.html
+
+ Java 8新特性探究 前言
+https://my.oschina.net/benhaile/blog/174136
+
+Java 8新特性探究（一）通往lambda之路_语法篇
+https://my.oschina.net/benhaile/blog/175012
+
+

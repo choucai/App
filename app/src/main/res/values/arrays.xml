@@ -10,7 +10,7 @@
         <item>05-TextInputLayout</item>
         <item>06-NavigationView</item>
         <item>07-TabLayout</item>
-        <item>08-</item>
+        <item>08-PopupWindow And PopupMenu</item>
         <item>09-</item>
         <item>10-</item>
     </string-array>
@@ -18,11 +18,20 @@
 
     <string-array name="arr_senior">
         <item>00-Runtime</item>
+        <item>01-IconFont and Svg</item>
+    </string-array>
+
+
+    <string-array name="arr_anim">
+        <item>00-View Animation</item>
+        <item>01-Drawable Animation</item>
+        <item>02-Property Animation</item>
     </string-array>
 
     <string-array name="arr_net">
         <item>00-Uri详解</item>
         <item>01-Android序列化</item>
+        <item>02-Android Deep Links</item>
     </string-array>
 
 </resources>

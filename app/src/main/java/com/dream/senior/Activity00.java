@@ -16,6 +16,8 @@ import com.dream.base.BaseActivity;
 
 
 /**
+ * https://www.aswifter.com/2015/11/04/android-6-permission/
+ *
  * android6.0运行时权限详解
  * http://www.jianshu.com/p/57798618bd90#rd
  * <p>

@@ -25,7 +25,7 @@ public class Activity00 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_00);
+        setContentView(R.layout.activity_uri);
 
         Uri uri = Uri.parse(url);
         ((TextView) findViewById(R.id.tv_all)).setText(url);

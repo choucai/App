@@ -9,4 +9,13 @@ dependencies {
     compile files('libs/jackson-annotations-2.6.0.jar')
 
     compile 'io.reactivex:rxjava:1.1.6'
+    compile 'junit:junit:4.12'
+
+    // https://mvnrepository.com/artifact/cglib/cglib
+    compile group: 'cglib', name: 'cglib', version: '3.2.4'
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
